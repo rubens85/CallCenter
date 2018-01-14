@@ -20,7 +20,6 @@ public class CallCenter {
 
     private final static Logger logger = LogManager.getLogger(CallCenter.class);
     public static javax.swing.JTextArea txtAreaResult;
-    public static javax.swing.JTextArea txtAreaQueue;
 
     /**
      * @param args the command line arguments
@@ -54,7 +53,6 @@ public class CallCenter {
         context.setConfigLocation(file.toURI());
 
         txtAreaResult = new javax.swing.JTextArea();
-        txtAreaQueue = new javax.swing.JTextArea();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CallCenterPanel().setVisible(true);

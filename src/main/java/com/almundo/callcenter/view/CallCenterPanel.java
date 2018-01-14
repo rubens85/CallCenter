@@ -8,6 +8,8 @@ package com.almundo.callcenter.view;
 import com.almundo.callcenter.CallCenter;
 import com.almundo.callcenter.controller.Dispatcher;
 import com.almundo.callcenter.controller.EmployeeController;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -44,12 +46,12 @@ public class CallCenterPanel extends javax.swing.JFrame {
         txtNumDirec = new javax.swing.JTextField();
         lblNumCalls = new javax.swing.JLabel();
         txtNumCalls = new javax.swing.JTextField();
-        btnAddCalls = new javax.swing.JButton();
+        btnInitCalls = new javax.swing.JButton();
         btnLoadEmpl = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaResult = CallCenter.txtAreaResult;
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtAreaQueue = CallCenter.txtAreaQueue;
+        txtAreaSummary = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
@@ -74,10 +76,10 @@ public class CallCenterPanel extends javax.swing.JFrame {
         txtNumOper.setText("5");
 
         txtNumSuper.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtNumSuper.setText("5");
+        txtNumSuper.setText("2");
 
         txtNumDirec.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtNumDirec.setText("5");
+        txtNumDirec.setText("1");
 
         lblNumCalls.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblNumCalls.setText("Número de Llamadas");
@@ -85,12 +87,11 @@ public class CallCenterPanel extends javax.swing.JFrame {
         txtNumCalls.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtNumCalls.setText("10");
 
-        btnAddCalls.setText("Agregar Llamadas");
-        btnAddCalls.setActionCommand("Agregar Llamadas");
-        btnAddCalls.setEnabled(false);
-        btnAddCalls.addActionListener(new java.awt.event.ActionListener() {
+        btnInitCalls.setText("Iniciar Llamadas");
+        btnInitCalls.setEnabled(false);
+        btnInitCalls.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddCallsActionPerformed(evt);
+                btnInitCallsActionPerformed(evt);
             }
         });
 
@@ -107,17 +108,17 @@ public class CallCenterPanel extends javax.swing.JFrame {
         txtAreaResult.setRows(5);
         jScrollPane1.setViewportView(txtAreaResult);
 
-        txtAreaQueue.setEditable(false);
-        txtAreaQueue.setColumns(20);
-        txtAreaQueue.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        txtAreaQueue.setRows(5);
-        jScrollPane2.setViewportView(txtAreaQueue);
+        txtAreaSummary.setEditable(false);
+        txtAreaSummary.setColumns(20);
+        txtAreaSummary.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        txtAreaSummary.setRows(5);
+        jScrollPane2.setViewportView(txtAreaSummary);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setText("Atención de Llamadas");
+        jLabel1.setText("Registro de Llamadas");
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setText("Llamadas en Espera");
+        jLabel2.setText("Resumen");
 
         btnClear.setText("Limpiar Registros");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +154,7 @@ public class CallCenterPanel extends javax.swing.JFrame {
                             .addComponent(txtNumCalls, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAddCalls)
+                            .addComponent(btnInitCalls)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblNumSuper)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -187,54 +188,75 @@ public class CallCenterPanel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumCalls)
                     .addComponent(txtNumCalls, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddCalls)
+                    .addComponent(btnInitCalls)
                     .addComponent(btnClear))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddCallsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCallsActionPerformed
+    private void btnInitCallsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInitCallsActionPerformed
         try {
+            txtAreaResult.setText("");
+        txtAreaSummary.setText("");
+            
             if (dispatcher == null) {
                 dispatcher = new Dispatcher(employeeController);
             }
             dispatcher.dispatchCall(CallCenter.prepareCall(this.getNumber(txtNumCalls)));
+
+            Set<Map.Entry<Dispatcher.CALLS, Integer>> resultCalls = dispatcher.getCallsMap().entrySet();
+
+            this.txtAreaSummary.setText("Llamadas Entrantes: ");
+            this.txtAreaSummary.append(dispatcher.getCallsMap().get(Dispatcher.CALLS.INIT) + "\n");
+            this.txtAreaSummary.append("Llamadas Finalizadas: ");
+            this.txtAreaSummary.append(dispatcher.getCallsMap().get(Dispatcher.CALLS.ENDED) + "\n");
+            this.txtAreaSummary.append("Llamadas en Espera: ");
+            this.txtAreaSummary.append(dispatcher.getCallsMap().get(Dispatcher.CALLS.AWAIT) + "\n");
+            this.txtAreaSummary.append("Llamadas en Esperas Atendidas: ");
+            this.txtAreaSummary.append(dispatcher.getCallsMap().get(Dispatcher.CALLS.RESUMED).toString());
+
         } catch (InterruptedException ex) {
-            
+
         }
 
-    }//GEN-LAST:event_btnAddCallsActionPerformed
+    }//GEN-LAST:event_btnInitCallsActionPerformed
 
     private void btnLoadEmplActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadEmplActionPerformed
         if (employeeController == null) {
             employeeController = new EmployeeController(CallCenter.getEmployees(this.getNumber(txtNumOper), this.getNumber(txtNumSuper), this.getNumber(txtNumDirec)));
             btnLoadEmpl.setEnabled(false);
-            btnAddCalls.setEnabled(true);
+            btnInitCalls.setEnabled(true);
         }
     }//GEN-LAST:event_btnLoadEmplActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        txtAreaResult.setText("");
-        txtAreaQueue.setText("");
+        employeeController = null;
+        dispatcher = null;
+        btnLoadEmpl.setEnabled(true);
+        btnInitCalls.setEnabled(false);
     }//GEN-LAST:event_btnClearActionPerformed
 
     private int getNumber(javax.swing.JTextField textField) {
-        return Integer.parseInt(textField.getText().isEmpty() ? "0" : textField.getText());
+        try {
+            return Integer.parseInt(textField.getText().isEmpty() ? "0" : textField.getText());
+        } catch(NumberFormatException nfe) {
+            return 0;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddCalls;
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnInitCalls;
     private javax.swing.JButton btnLoadEmpl;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -246,8 +268,8 @@ public class CallCenterPanel extends javax.swing.JFrame {
     private javax.swing.JLabel lblNumDirec;
     private javax.swing.JLabel lblNumOper;
     private javax.swing.JLabel lblNumSuper;
-    private javax.swing.JTextArea txtAreaQueue;
     private javax.swing.JTextArea txtAreaResult;
+    private javax.swing.JTextArea txtAreaSummary;
     private javax.swing.JTextField txtNumCalls;
     private javax.swing.JTextField txtNumDirec;
     private javax.swing.JTextField txtNumOper;

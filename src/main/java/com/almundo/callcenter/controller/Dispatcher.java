@@ -63,10 +63,7 @@ public class Dispatcher {
 
     private void dispatchCall(Call call) {
         boolean empleadosNoDispo = true;
-        logger.info("Inicia dispatchCall");
-        //text = "LLamada " + call.getId() + ". Cliente: " + call.getClient() + " a las " + sdf.format(new Date());
-        //logger.info(text);
-        //CallCenter.txtAreaResult.append(text + "\n");
+        logger.info("Inicia llamada");
         Set<Map.Entry<TypeEmployee, List<Employee>>> entrySet = emplContr.getAvailableEmpl().entrySet();
         for (Map.Entry<TypeEmployee, List<Employee>> listEmpl : entrySet) {
             if (listEmpl.getValue().isEmpty()) {
@@ -93,10 +90,6 @@ public class Dispatcher {
             logger.info(text);
             callQueue.add(call);
             CallCenter.txtAreaResult.append(text + "\n");
-
-            text = "Llamada: " + call.getId() + " Cliente: " + call.getClient();
-            logger.info(text);
-            CallCenter.txtAreaQueue.append(text + "\n");
         }
     }
 
@@ -110,7 +103,6 @@ public class Dispatcher {
             try {
                 final Call callFinish = future.get();
                 emplContr.manageEmploy(callFinish.getEmployee(), EmployeeController.Operation.ADD);
-                logger.trace("CALL_FINI Llamada "+callFinish.getId() + " finalizada");
                 callsMap.put(CALLS.ENDED, ++ended);
                 text = "El " + callFinish.getEmployee().getType() + " " + callFinish.getEmployee().getFullName() 
                         + " ha finalizado la llamada y ahora se encuentra disponible. "
@@ -121,7 +113,6 @@ public class Dispatcher {
 
                 if (!callQueue.isEmpty()) {
                     Call call = callQueue.remove(0);
-                    logger.trace("CALL_WAIN Llamada en cola atendida "+call.getId());
                     callsMap.put(CALLS.RESUMED, ++resumed);
                     this.dispatchCall(call);
                 }

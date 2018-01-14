@@ -17,9 +17,8 @@ import org.junit.Test;
 
 /**
  *
- * @author rubens
+ * @author Ruben Ramirez
  */
-@Ignore
 public class DispatcherTest {
 
     private int numOper;
@@ -46,7 +45,6 @@ public class DispatcherTest {
     @Before
     public void setUp() {
         CallCenter.txtAreaResult = new JTextArea();
-        CallCenter.txtAreaQueue = new JTextArea();
     }
 
     @After
