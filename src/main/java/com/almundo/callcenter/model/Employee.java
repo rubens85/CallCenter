@@ -1,7 +1,9 @@
 package com.almundo.callcenter.model;
 
 /**
- *
+ * Clase Employee que extiende de la clase Person. Esta clase 
+ * maneja informaciòn de los empleados que atienden las llamadas.
+ * 
  * @author Ruben Ramirez
  */
 public class Employee extends Person {

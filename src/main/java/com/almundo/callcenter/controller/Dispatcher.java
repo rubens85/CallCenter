@@ -34,7 +34,7 @@ public class Dispatcher {
     private EmployeeController emplContr;
 
     private String text;
-    private SimpleDateFormat sdf = new SimpleDateFormat("H:mm:ss");
+    private final SimpleDateFormat formatDate = new SimpleDateFormat("H:mm:ss");
     
     private int init=0;
     private int await=0;
@@ -72,7 +72,7 @@ public class Dispatcher {
             }
             empleadosNoDispo = false;
             Employee nextEmpl = listEmpl.getValue().iterator().next();
-            text = "La llamada " + call.getId() + " del Cliente: " + call.getClient() + " es atendida por el " + nextEmpl.getType() + ": " + nextEmpl.getFullName() + " a las " + sdf.format(new Date());
+            text = "La llamada " + call.getId() + " del Cliente: " + call.getClient() + " es atendida por el " + nextEmpl.getType() + ": " + nextEmpl.getFullName() + " a las " + formatDate.format(new Date());
             callsMap.put(CALLS.INIT, ++init);
             
             call.setEmployee(nextEmpl);
@@ -106,7 +106,7 @@ public class Dispatcher {
                 callsMap.put(CALLS.ENDED, ++ended);
                 text = "El " + callFinish.getEmployee().getType() + " " + callFinish.getEmployee().getFullName() 
                         + " ha finalizado la llamada y ahora se encuentra disponible. "
-                        + "Hora de Finalización "+ sdf.format(new Date())
+                        + "Hora de Finalización "+ formatDate.format(new Date())
                         + ". Duración de la llamada: " + callFinish.getTime() + " Segundos";
                 CallCenter.txtAreaResult.append(text + "\n");
                 logger.info(text);

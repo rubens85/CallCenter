@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.almundo.callcenter.model;
 
 /**
  *
- * @author rubens
+ * Clase Person, la cual tiene los datos basicos de una persona.
+ * 
+ * @author Ruben Ramirez
  */
 public class Person {
     private Integer ident;

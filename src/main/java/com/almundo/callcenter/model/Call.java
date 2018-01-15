@@ -4,7 +4,11 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- *
+ * Clase call para el manejo de la información de las llamadas realizadas.
+ * Esta clase implementa la interfaz Callable, por medio de la cual se podrá
+ * ejecutar esta clase en un hilo y simular la llamadas ejecutando
+ * el metodo heredado call()
+ * 
  * @author Ruben Ramirez
  */
 public class Call implements Callable<Call>{
