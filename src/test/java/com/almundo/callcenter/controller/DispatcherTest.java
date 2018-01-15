@@ -12,7 +12,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -33,9 +32,6 @@ public class DispatcherTest {
 
     @BeforeClass
     public static void setUpClass() {
-//        LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);
-//        File file = new File("testJunit/log4j2.xml");
-//        context.setConfigLocation(file.toURI());
     }
 
     @AfterClass
@@ -52,16 +48,17 @@ public class DispatcherTest {
     }
     
     /**
-     * Test donde se realizan 10 llamadas al tiempo y se encuentran 10 empleados creados
-     *
+     * Test dispatchCall: Se realizan 10 llamadas al tiempo y se encuentran 10 empleados creados.
+     * Todas las llamadas deberan ser atentidas sin colocar ninguna en espera.
+     * 
      * @throws InterruptedException
      */
     @Test
     public void testDispatchCall10() throws InterruptedException {
         numOper = 5;
         numSuper = 3;
-        numDirec = 0;
-        numCalls = 11;
+        numDirec = 2;
+        numCalls = 10;
 
         dispatcher = new Dispatcher(new EmployeeController(CallCenter.getEmployees(numOper, numSuper, numDirec)));
         dispatcher.dispatchCall(CallCenter.prepareCall(numCalls));
@@ -70,14 +67,15 @@ public class DispatcherTest {
         assertEquals(numCalls, dispatcher.getCallsMap().get(Dispatcher.CALLS.INIT).intValue());
         //Evaluando que el numero de llamadas realizadas se hayan finalizado correctamente.
         assertEquals(numCalls, dispatcher.getCallsMap().get(Dispatcher.CALLS.ENDED).intValue());
+        //Evaluando que el numero de llamadas puestas en espera sea cero, ya que hay empleados disponibles para atender.
+        assertEquals(0, dispatcher.getCallsMap().get(Dispatcher.CALLS.AWAIT).intValue());
     }
 
     /**
-     * Test donde se realizan 10 llamadas al tiempo y se encuentran 5 empleados creados, 
+     * Test dispatchCall: Se realizan 10 llamadas al tiempo y se encuentran 5 empleados creados, 
      * En el proceso se deben colocar 5 llamadas en espera y luego ser atendidas
      * cuando se desocupen los empleados.
      * 
-     * Este caso prueba el punto extra numero 1.
      * @throws InterruptedException
      */
     @Test

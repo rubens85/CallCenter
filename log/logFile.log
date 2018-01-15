@@ -1,34 +1,68 @@
-2018-01-14 18:36:01.086 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.089 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 1 del Cliente: Cliente 1 es atendida por el OPERADOR: Operador 1A a las 18:36:01
-2018-01-14 18:36:01.092 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.093 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 2 del Cliente: Cliente 2 es atendida por el OPERADOR: Operador 2A a las 18:36:01
-2018-01-14 18:36:01.093 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.094 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 3 del Cliente: Cliente 3 es atendida por el OPERADOR: Operador 3A a las 18:36:01
-2018-01-14 18:36:01.094 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.095 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 4 del Cliente: Cliente 4 es atendida por el OPERADOR: Operador 4A a las 18:36:01
-2018-01-14 18:36:01.096 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.096 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 5 del Cliente: Cliente 5 es atendida por el OPERADOR: Operador 5A a las 18:36:01
-2018-01-14 18:36:01.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 6 del Cliente: Cliente 6 es atendida por el SUPERVISOR: Supervisor 1B a las 18:36:01
-2018-01-14 18:36:01.098 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 7 del Cliente: Cliente 7 es atendida por el SUPERVISOR: Supervisor 2B a las 18:36:01
-2018-01-14 18:36:01.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.100 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 8 del Cliente: Cliente 8 es atendida por el DIRECTOR: Director 1C a las 18:36:01
-2018-01-14 18:36:01.100 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 9 será puesta en espera para ser atendida por el próximo empleado disponible
-2018-01-14 18:36:01.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:01.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 10 será puesta en espera para ser atendida por el próximo empleado disponible
-2018-01-14 18:36:06.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 1A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:06. Duración de la llamada: 5 Segundos
-2018-01-14 18:36:06.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:06.098 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 9 del Cliente: Cliente 9 es atendida por el OPERADOR: Operador 1A a las 18:36:06
-2018-01-14 18:36:06.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 3A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:06. Duración de la llamada: 5 Segundos
-2018-01-14 18:36:06.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
-2018-01-14 18:36:06.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 10 del Cliente: Cliente 10 es atendida por el OPERADOR: Operador 3A a las 18:36:06
-2018-01-14 18:36:06.100 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 4A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:06. Duración de la llamada: 5 Segundos
-2018-01-14 18:36:07.103 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 5A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:07. Duración de la llamada: 6 Segundos
-2018-01-14 18:36:08.104 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 1B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:08. Duración de la llamada: 7 Segundos
-2018-01-14 18:36:09.105 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El DIRECTOR Director 1C ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:09. Duración de la llamada: 8 Segundos
-2018-01-14 18:36:10.106 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 2B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:10. Duración de la llamada: 9 Segundos
-2018-01-14 18:36:11.096 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 2A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:11. Duración de la llamada: 10 Segundos
-2018-01-14 18:36:11.103 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 3A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:11. Duración de la llamada: 5 Segundos
-2018-01-14 18:36:15.103 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 1A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 18:36:15. Duración de la llamada: 9 Segundos
+2018-01-15 12:57:02.081 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.085 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 1 del Cliente: Cliente 1 es atendida por el OPERADOR: Operador 1A a las 12:57:02
+2018-01-15 12:57:02.088 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.089 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 2 del Cliente: Cliente 2 es atendida por el OPERADOR: Operador 2A a las 12:57:02
+2018-01-15 12:57:02.090 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.090 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 3 del Cliente: Cliente 3 es atendida por el OPERADOR: Operador 3A a las 12:57:02
+2018-01-15 12:57:02.091 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.092 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 4 del Cliente: Cliente 4 es atendida por el OPERADOR: Operador 4A a las 12:57:02
+2018-01-15 12:57:02.092 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.093 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 5 del Cliente: Cliente 5 es atendida por el OPERADOR: Operador 5A a las 12:57:02
+2018-01-15 12:57:02.094 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.094 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 6 del Cliente: Cliente 6 es atendida por el SUPERVISOR: Supervisor 1B a las 12:57:02
+2018-01-15 12:57:02.095 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.095 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 7 del Cliente: Cliente 7 es atendida por el SUPERVISOR: Supervisor 2B a las 12:57:02
+2018-01-15 12:57:02.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.098 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 8 del Cliente: Cliente 8 es atendida por el DIRECTOR: Director 1C a las 12:57:02
+2018-01-15 12:57:02.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.100 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 9 será puesta en espera para ser atendida por el próximo empleado disponible
+2018-01-15 12:57:02.100 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:02.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 10 será puesta en espera para ser atendida por el próximo empleado disponible
+2018-01-15 12:57:08.095 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 4A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:08. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:08.096 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:08.096 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 9 del Cliente: Cliente 9 es atendida por el OPERADOR: Operador 4A a las 12:57:08
+2018-01-15 12:57:08.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 3A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:08. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:08.097 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:08.098 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 10 del Cliente: Cliente 10 es atendida por el OPERADOR: Operador 3A a las 12:57:08
+2018-01-15 12:57:08.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 5A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:08. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:08.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El DIRECTOR Director 1C ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:08. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:10.093 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 1A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:10. Duración de la llamada: 8 Segundos
+2018-01-15 12:57:10.094 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 2A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:10. Duración de la llamada: 8 Segundos
+2018-01-15 12:57:11.104 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 2B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:11. Duración de la llamada: 9 Segundos
+2018-01-15 12:57:12.099 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 1B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:12. Duración de la llamada: 10 Segundos
+2018-01-15 12:57:14.101 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 4A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:14. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:17.103 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 3A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:17. Duración de la llamada: 9 Segundos
+2018-01-15 12:57:20.869 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.869 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 1 del Cliente: Cliente 1 es atendida por el OPERADOR: Operador 5A a las 12:57:20
+2018-01-15 12:57:20.871 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.871 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 2 del Cliente: Cliente 2 es atendida por el OPERADOR: Operador 1A a las 12:57:20
+2018-01-15 12:57:20.873 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.873 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 3 del Cliente: Cliente 3 es atendida por el OPERADOR: Operador 2A a las 12:57:20
+2018-01-15 12:57:20.873 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.874 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 4 del Cliente: Cliente 4 es atendida por el OPERADOR: Operador 4A a las 12:57:20
+2018-01-15 12:57:20.874 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.874 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 5 del Cliente: Cliente 5 es atendida por el OPERADOR: Operador 3A a las 12:57:20
+2018-01-15 12:57:20.875 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.875 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 6 del Cliente: Cliente 6 es atendida por el SUPERVISOR: Supervisor 2B a las 12:57:20
+2018-01-15 12:57:20.876 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.876 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 7 del Cliente: Cliente 7 es atendida por el SUPERVISOR: Supervisor 1B a las 12:57:20
+2018-01-15 12:57:20.876 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.877 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 8 del Cliente: Cliente 8 es atendida por el DIRECTOR: Director 1C a las 12:57:20
+2018-01-15 12:57:20.877 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.877 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 9 será puesta en espera para ser atendida por el próximo empleado disponible
+2018-01-15 12:57:20.878 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:20.878 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada: 10 será puesta en espera para ser atendida por el próximo empleado disponible
+2018-01-15 12:57:25.878 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 1A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:25. Duración de la llamada: 5 Segundos
+2018-01-15 12:57:25.879 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:25.879 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 9 del Cliente: Cliente 9 es atendida por el OPERADOR: Operador 1A a las 12:57:25
+2018-01-15 12:57:25.880 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 2B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:25. Duración de la llamada: 5 Segundos
+2018-01-15 12:57:25.880 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - Inicia llamada
+2018-01-15 12:57:25.880 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - La llamada 10 del Cliente: Cliente 10 es atendida por el SUPERVISOR: Supervisor 2B a las 12:57:25
+2018-01-15 12:57:26.876 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 5A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:26. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:26.877 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 4A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:26. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:26.881 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 1B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:26. Duración de la llamada: 6 Segundos
+2018-01-15 12:57:28.881 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El DIRECTOR Director 1C ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:28. Duración de la llamada: 8 Segundos
+2018-01-15 12:57:30.874 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 2A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:30. Duración de la llamada: 10 Segundos
+2018-01-15 12:57:30.878 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 3A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:30. Duración de la llamada: 10 Segundos
+2018-01-15 12:57:30.887 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El SUPERVISOR Supervisor 2B ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:30. Duración de la llamada: 5 Segundos
+2018-01-15 12:57:32.885 [AWT-EventQueue-0] INFO  com.almundo.callcenter.controller.Dispatcher - El OPERADOR Operador 1A ha finalizado la llamada y ahora se encuentra disponible. Hora de Finalización 12:57:32. Duración de la llamada: 7 Segundos

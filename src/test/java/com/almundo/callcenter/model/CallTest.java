@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.almundo.callcenter.model;
 
 import java.lang.reflect.Method;
@@ -15,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author rubens
+ * @author Ruben Ramirez
  */
 public class CallTest {
 
@@ -39,19 +34,21 @@ public class CallTest {
     }
 
     /**
-     * Test of getId method, of class Call.
+     * Test getTimeRandom: Pruba el tiempo de llamada aleatorio
+     * que debe estar entre 5 y 10 segundos.
      */
     @Test
-    public void testGetId() throws Exception {
+    public void testGetTimeRandom() throws Exception {
         Method method = Call.class.getDeclaredMethod("getTimeRandom");
         method.setAccessible(true);
 
         long time = (long) method.invoke(new Call());
+        long time1 = (long) method.invoke(new Call());
+        long time2 = (long) method.invoke(new Call());
 
         assertTrue(time >= 5 && time <= 10);
-        assertTrue(time >= 5 && time <= 10);
-        assertTrue(time >= 5 && time <= 10);
-        assertTrue(time >= 5 && time <= 10);
+        assertTrue(time1 >= 5 && time1 <= 10);
+        assertTrue(time2 >= 5 && time2 <= 10);
     }
 
 }

@@ -207,8 +207,8 @@ public class CallCenterPanel extends javax.swing.JFrame {
     private void btnInitCallsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInitCallsActionPerformed
         try {
             txtAreaResult.setText("");
-        txtAreaSummary.setText("");
-            
+            txtAreaSummary.setText("");
+
             if (dispatcher == null) {
                 dispatcher = new Dispatcher(employeeController);
             }
@@ -244,12 +244,15 @@ public class CallCenterPanel extends javax.swing.JFrame {
         dispatcher = null;
         btnLoadEmpl.setEnabled(true);
         btnInitCalls.setEnabled(false);
+        txtAreaResult.setText("");
+        txtAreaSummary.setText("");
+
     }//GEN-LAST:event_btnClearActionPerformed
 
     private int getNumber(javax.swing.JTextField textField) {
         try {
             return Integer.parseInt(textField.getText().isEmpty() ? "0" : textField.getText());
-        } catch(NumberFormatException nfe) {
+        } catch (NumberFormatException nfe) {
             return 0;
         }
     }

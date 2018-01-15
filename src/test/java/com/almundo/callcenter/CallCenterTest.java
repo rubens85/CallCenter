@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.almundo.callcenter;
 
 import org.junit.After;
@@ -14,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author rdramirez
+ * @author Ruben Ramirez
  */
 public class CallCenterTest {
     
@@ -38,7 +33,7 @@ public class CallCenterTest {
     }
 
     /**
-     * Test of main method, of class CallCenter.
+     * Test prepareCall: se evalua que la creación de las llamadas sea correcta.
      */
     @Test
     public void testPerpareCall() {

@@ -13,7 +13,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
 
 /**
- *
+ * Clase inicial donde se carga la aplicación.
+ * 
  * @author Ruben Ramirez
  */
 public class CallCenter {
@@ -60,6 +61,14 @@ public class CallCenter {
         });
     }
 
+    /**
+     * Metodo para configurar Empleados en la aplicacion.
+     * 
+     * @param numOper numero de operadores a configurar
+     * @param numSuper numero de supervisores a configurar
+     * @param numDir numero de directores a configurar
+     * @return lista de empleados configurados.
+     */
     public static List<Employee> getEmployees(int numOper, int numSuper, int numDir) {
         return new ArrayList<Employee>() {
             {
@@ -81,6 +90,12 @@ public class CallCenter {
         };
     }
 
+    /**
+     * Metodo para configurar llamadas entrantes para la aplicación.
+     * 
+     * @param numCalls numero de llamadas a simular
+     * @return vector de llamadas
+     */
     public static Call[] prepareCall(int numCalls) {
 
         return new ArrayList<Call>() {

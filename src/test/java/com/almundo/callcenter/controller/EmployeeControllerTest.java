@@ -18,7 +18,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 
 /**
  *
@@ -42,6 +41,9 @@ public class EmployeeControllerTest {
     public static void tearDownClass() {
     }
     
+    /**
+     * Configuracion de 15 empleados.
+     */
     @Before
     public void setUp() {
         numOper = 5;
@@ -54,7 +56,7 @@ public class EmployeeControllerTest {
     }
 
     /**
-     * Test of getAvailableEmpl method, of class EmployeeController.
+     * Test getAvailableEmpl: Evalua los empleados disponibles de acuerdo al tipo. Previamente se configuraron 5 de cada uno.
      */
     @Test
     public void testGetAvailableEmpl() {
@@ -66,20 +68,19 @@ public class EmployeeControllerTest {
     }
 
     /**
-     * Test of manageEmploy method, of class EmployeeController.
+     * Test manageEmploy: Se evalua que un empleado pueda ser incluido en la lista de empleados disponibles.
      */
     @Test
     public void testManageEmployAdd() {
         employeeController = new EmployeeController(CallCenter.getEmployees(numOper, numSuper, numDirec));
         
         assertTrue(employeeController.manageEmploy(new Employee(500, new Person(), TypeEmployee.OPERADOR), EmployeeController.Operation.ADD));
-        
         assertEquals(numOper+1, employeeController.getAvailableEmpl().get(TypeEmployee.OPERADOR).size());
-        
+
     }
     
     /**
-     * Test of manageEmploy method, of class EmployeeController.
+     * Test manageEmploy: Se evalua que un empleado pueda ser removido de la lista de empleados disponibles.
      */
     @Test
     public void testManageEmployRemove() {
