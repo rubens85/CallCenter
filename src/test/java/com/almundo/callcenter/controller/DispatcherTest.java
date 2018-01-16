@@ -99,4 +99,33 @@ public class DispatcherTest {
         assertEquals(10, dispatcher.getCallsMap().get(Dispatcher.CALLS.ENDED).intValue());
     }    
 
+     /**
+     * Test dispatchCall: Se realizan 12 llamadas al tiempo y se encuentran 8 empleados creados, 
+     * En el proceso se deben colocar 4 llamadas en espera y luego ser atendidas
+     * cuando se desocupen los empleados. Nota: como el Dispatcher solo puede atender 10 llamadas
+     * el servicio de hilos, iniciará las dos llamadas restantes una vez se desocupen los hilos del pool.
+     * 
+     * @throws InterruptedException
+     */
+    @Test
+    public void testDispatchCall10_3() throws InterruptedException {
+        numOper = 5;
+        numSuper = 2;
+        numDirec = 1;
+        numCalls = 12;
+
+        dispatcher = new Dispatcher(new EmployeeController(CallCenter.getEmployees(numOper, numSuper, numDirec)));
+        dispatcher.dispatchCall(CallCenter.prepareCall(numCalls));
+        
+        
+        //Se espera que en total se atiendan 12 llamadas.
+        assertEquals(12, dispatcher.getCallsMap().get(Dispatcher.CALLS.INIT).intValue());
+        //Se espera que se coloquen 4 llamadas en espera.
+        assertEquals(4, dispatcher.getCallsMap().get(Dispatcher.CALLS.AWAIT).intValue());
+        //Se espera que las 5 llamadas en espera sean atendidas.
+        assertEquals(4, dispatcher.getCallsMap().get(Dispatcher.CALLS.RESUMED).intValue());
+        //Se espera en total que las diez llamadas sean atendidas.
+        assertEquals(12, dispatcher.getCallsMap().get(Dispatcher.CALLS.ENDED).intValue());
+    }  
+    
 }
